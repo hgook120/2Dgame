@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -8,13 +9,16 @@ public class MenuManager : MonoBehaviour
     // 語法：
     // 類型 方法名稱 () {}
     // void 無類型
-    void StartGame()
+    public void StartGame()
     {
-
+        print("StartGame");  // 輸出("訊息")
+        SceneManager.LoadScene("Scene01");
+        //SceneManager.LoadScene(1);
     }
 
-    void QuitGame()
+    public void QuitGame()
     {
-
+        print("QuitGame");  // 輸出("訊息")
+        Application.Quit();
     }
 }
